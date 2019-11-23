@@ -1,0 +1,20 @@
+<div class="card-container">
+    <mat-card>
+        <h3>Data Uploaded</h3>
+        <div class="example-button-row">
+            <mat-tab-group>
+                <div *ngFor="let sheet of tableData;">
+                    <mat-tab label="{{sheet.name}}">
+                        <table class="mat-table">
+                            <tr *ngFor="let row of sheet; let i = index"
+                                [ngClass]="i === 0 ? 'mat-header-row' : 'mat-row'">
+                                <td [ngClass]="i === 0 ? 'mat-header-cell' : 'mat-cell'" *ngFor="let cell of row;">
+                                    {{cell}}</td>
+                            </tr>
+                        </table>
+                    </mat-tab>
+                </div>
+            </mat-tab-group>
+        </div>
+    </mat-card>
+</div>

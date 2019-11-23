@@ -5,13 +5,10 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './uploaded-table.component.html',
   styleUrls: ['./uploaded-table.component.css']
 })
-export class UploadedTableComponent implements OnInit {
+export class UploadedTableComponent {
 
   @Input() tableData: any[];
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

@@ -5,8 +5,12 @@
   <button type="button" mat-raised-button color="primary" (click)="fileInput.click()">
     <mat-icon>cloud_upload</mat-icon>
     {{buttonName}}
-    <input hidden (change)="onFileChange($event)" #fileInput type="file" id="file">
+    <input hidden (change)="onFileChange($event)" #fileInput type="file" id="file"
+      accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
   </button>
+  <mat-error *ngIf="error">
+    <p>Your file is either corrupted or unsupported</p>
+  </mat-error>
 </div>
 
-<app-uploaded-table *ngIf ="excelData.length>0" [tableData]="excelData"></app-uploaded-table>
+<app-uploaded-table *ngIf="excelData.length>0" [tableData]="excelData"></app-uploaded-table>

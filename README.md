@@ -2,7 +2,7 @@
 
 ## Clone project
 
-Run `git clone ` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `git clone https://github.com/amatar07/demo-app.git` The app will clone in the opened directory.
 
 ## Install dependancies
 
